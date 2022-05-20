@@ -27,24 +27,24 @@ a:hover, a:active {
 </br>
   
     <div class=" shadow-sm card-task p-3">
-      <center> <h4>Notifications</h4></center>
+      <center> <h3>Notifications</h3></center>
 </br>
       <table class="table">
           <thead>
               <tr>
-                  <th scope="col">Sr No.</th>
+                  <!-- <th scope="col">Sr No.</th> -->
                   <th scope="col">Message</th>
                   <th scope="col">Message From</th>
-                  <th scope="col">View Details</th>
-                  <th scope="col">Delete Notification</th>
+                  <th scope="col">View Message Details</th>
+                  <th scope="col"><center>Delete Notification</center></th>
               </tr>
 
               <?php
   $i=1;
   foreach($data as $row)
   {
-  $srNO = $row->sr_no;
-  echo "<td>".$srNO."</td>";
+  //$srNO = $row->sr_no;
+  //echo "<td>".$srNO."</td>";
   $msg = $row->message;
   echo "<td>".$msg."</td>";
   $msgFrom = $row->msg_from;
@@ -96,7 +96,7 @@ a:hover, a:active {
                 </td>
 
               
-  <td><a href='<?php echo base_url().'index.php/notification_controller/delete?sr_no='.$srNO;?>'>Delete</a></td>
+                <td><center><a href='<?php echo base_url().'index.php/notification_controller/delete?sr_no='.$srNO;?>'>Delete</a></center></td>
 
   
      
